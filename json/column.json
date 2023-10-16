@@ -1,0 +1,41 @@
+{
+    "column": [
+        {
+            "name": "To Do",
+            "tasks": [
+                {
+                    "name": "Task 1",
+                    "description": "Description for Task 1",
+                    "creator": {
+                        "username": "cyruszheng"
+                    },
+                    "dueDate": "10-15-2023",
+                    "priority": "HIGH"
+                },
+                {
+                    "name": "Task 2",
+                    "description": "Description for Task 2",
+                    "creator": {
+                        "username": "abisatti"
+                    },
+                    "dueDate": "10-15-2023",
+                    "priority": "MEDIUM"
+                }
+            ]
+        },
+        {
+            "name": "In Progress",
+            "tasks": [
+                {
+                    "name": "Task 3",
+                    "description": "Description for Task 3",
+                    "creator": {
+                        "username": "bslaski10"
+                    },
+                    "dueDate": "10-15-2023",
+                    "priority": "LOW"
+                }
+            ]
+        }
+    ]
+}
