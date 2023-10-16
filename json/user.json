@@ -1,0 +1,15 @@
+[
+    {
+        "UUID.randomUUID()": "",
+        "firstName": "Cyrus",
+        "lastName": "Zheng",
+        "username": "cyruszheng",
+        "password": "abc123"
+    },{
+        "UUID.randomUUID()": "",
+        "firstName": "Abi",
+        "lastName": "Satti",
+        "username": "abisatti",
+        "password": "123abc"
+    }
+]

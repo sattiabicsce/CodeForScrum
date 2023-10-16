@@ -1,0 +1,15 @@
+[
+    {
+        "name": "project1",
+        "UUID.randomUUID()": "",
+        "comment": "Make sure to revise any spelling mistakes.",
+        "owner": "cyruszheng",
+        "members": "abisatti, bslaski10, tp0113" 
+    },{
+        "name": "project2",
+        "UUID.randomUUID()": "",
+        "comment": "N/A",
+        "owner": "abisatti",
+        "members": "cyruszheng, bslaski10, tp0113"
+    }
+]

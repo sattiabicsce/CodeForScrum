@@ -1,0 +1,23 @@
+{
+    "comments": [
+        {
+            "user": "cyruszheng",
+            "userInput": "This is the first comment.",
+            "date": "10-13-2023",
+            "replies": [
+                {
+                    "user": "abisatti",
+                    "userInput": "This is a reply to the first comment.",
+                    "date": "10-14-2023",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "user": "bslaski10",
+            "userInput": "This is another comment.",
+            "date": "10-15-2023",
+            "replies": []
+        }
+    ]
+}
