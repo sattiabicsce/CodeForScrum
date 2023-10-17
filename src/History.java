@@ -1,5 +1,3 @@
-package stubs;
-
 class History {
     private String change;
     private String date;
@@ -22,3 +20,4 @@ class History {
     public User getUser() {
         return user;
     }
+}
