@@ -1,27 +1,20 @@
 import java.util.ArrayList;
 
 public class Storage {
-    private ArrayList<User> users;
-    private ArrayList<Project> projects;
-
-    public Storage() {
-        this.users = new ArrayList<>();
-        this.projects = new ArrayList<>();
+    
+    public static ArrayList<User> getUsers() {
+        return null;
     }
 
-    public ArrayList<User> getUsers() {
-        return users;
+    public static ArrayList<Project> getProjects() {
+        return null;
     }
 
-    public ArrayList<Project> getProjects() {
-        return projects;
-    }
-
-    public boolean saveUsers() {
+    public static boolean saveUsers() {
         return true; 
     }
 
-    public boolean saveProjects() {
+    public static boolean saveProjects() {
         return true;
     }
 }

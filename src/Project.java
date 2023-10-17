@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class project {
+public class Project {
     private String name;
     private UUID id;
     private ArrayList<Comment> comments;
     private User owner;
     private ArrayList<User> members;
 
-    public project(String name) {
+    public Project(String name) {
         this.name = name;
         this.id = UUID.randomUUID();
         this.comments = new ArrayList<>();
