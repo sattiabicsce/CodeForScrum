@@ -23,7 +23,7 @@ private static ProjectList projectList;
     }
 
     // Method to get a project from the list
-    public Project getProject(String projectName) {
-        return projectName;
+    public String getProject(String name) {
+        return name;
     }
 }
