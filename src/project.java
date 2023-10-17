@@ -20,15 +20,12 @@ public class project {
     }
 
     public void addTask(Task task) {
-        // Logic to add task to the project
     }
 
     public void removeTask(Task task) {
-        // Logic to remove task from the project
     }
 
     public void share() {
-        // Logic to share the project with members
     }
 
     public void addComment(String note) {

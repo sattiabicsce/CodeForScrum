@@ -1,12 +1,12 @@
 [
     {
-        "UUID.randomUUID()": "",
+        "id": "abb67196-a46d-466a-897d-24be396d384d",
         "firstName": "Cyrus",
         "lastName": "Zheng",
         "username": "cyruszheng",
         "password": "abc123"
     },{
-        "UUID.randomUUID()": "",
+        "id": "6c672eb3-c6d3-4137-a238-231593a96fc4",
         "firstName": "Abi",
         "lastName": "Satti",
         "username": "abisatti",
