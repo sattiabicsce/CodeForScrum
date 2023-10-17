@@ -1,3 +1,6 @@
-public class TaskPriority {
-    
+public enum TaskPriority {
+    LOW,
+    MEDIUM,
+    HIGH,
+    URGENT;
 }
