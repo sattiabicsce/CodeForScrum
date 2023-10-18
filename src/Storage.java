@@ -1,27 +1,34 @@
 import java.util.ArrayList;
 
 public class Storage {
-    private ArrayList<User> users;
-    private ArrayList<Project> projects;
 
-    public Storage() {
-        this.users = new ArrayList<>();
-        this.projects = new ArrayList<>();
+    public static ArrayList<User> getUsers() {
+        return new ArrayList<>();
     }
 
-    public ArrayList<User> getUsers() {
-        return users;
+    public static ArrayList<Project> getProjects() {
+        return new ArrayList<>();
     }
 
-    public ArrayList<Project> getProjects() {
-        return projects;
-    }
-
-    public boolean saveUsers() {
-        return true; 
-    }
-
-    public boolean saveProjects() {
+    public static boolean saveUsers() {
         return true;
+    }
+
+    public static boolean saveProjects() {
+        return true;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<User> users = getUsers();
+        System.out.println("Retrieved Users: " + users);
+
+        ArrayList<Project> projects = getProjects();
+        System.out.println("Retrieved Projects: " + projects);
+
+        boolean usersSaved = saveUsers();
+        System.out.println("Users Saved: " + usersSaved);
+
+        boolean projectsSaved = saveProjects();
+        System.out.println("Projects Saved: " + projectsSaved);
     }
 }
