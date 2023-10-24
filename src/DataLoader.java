@@ -9,7 +9,7 @@ import org.json.simple.parser.JSONParser;;
 
 public class DataLoader extends DataConstants{
 	
-	public static ArrayList<User> getUsers() {
+	public static ArrayList<User> getUser() {
 		ArrayList<User> users = new ArrayList<User>();
 		
 		try {
