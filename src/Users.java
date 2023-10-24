@@ -22,7 +22,6 @@ public class Users {
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	
@@ -40,10 +39,10 @@ public class Users {
 		return userList;
 	}
 	
-	public boolean addUser(String username, String firstName, String lastName) {
+	public boolean addUser(String username, String password, String firstName, String lastName) {
 		if(haveUser(username))return false;
 		
-		userList.add(new User(username, firstName, lastName));
+		userList.add(new User(username, password, firstName, lastName));
 		return true;
 	}
 	
