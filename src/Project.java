@@ -32,11 +32,7 @@ public class Project {
     }
 
     public void addComment(String note) {
-<<<<<<< HEAD
-        Comment newComment = null;
-=======
         Comment newComment = new Comment(owner, note);
->>>>>>> d6efc77744d3c564a181e41cab86717f8797d6d2
         this.comments.add(newComment);
     }
 }
