@@ -8,52 +8,37 @@
             "status": "completed",
             "priority": "high",
             "assignTask": "cyruszheng"
-        },
-        {
-            "name": "Revise Spelling",
-            "description": "Please make sure to review all of the documents",
-            "creator": "cyruszheng",
-            "dueDate": "10/11/2023",
-            "status": "in_progress",
-            "priority": "medium",
-            "assignTask": "abisatti"
         }
     ],
-    "history": {
-        "history": [
-            {
-                "change": "First change",
-                "date": "10-15-2023",
-                "user": "cyruszheng"
-            },
-            {
-                "change": "Second change",
-                "date": "10-15-2023",
-                "user": "abisatti"
-            }
-        ]
-    },
-    "comments": {
-        "comments": [
-            {
-                "user": "cyruszheng",
-                "userInput": "This is the first comment.",
-                "date": "10-13-2023",
-                "replies": [
-                    {
-                        "user": "abisatti",
-                        "userInput": "This is a reply to the first comment.",
-                        "date": "10-14-2023",
-                        "replies": []
-                    }
-                ]
-            },
-            {
-                "user": "bslaski10",
-                "userInput": "This is another comment.",
-                "date": "10-15-2023",
-                "replies": []
-            }
-        ]
-    }
+        "history": {
+            "history": [
+                {
+                    "change": "First change",
+                    "date": "10-15-2023",
+                    "user": "cyruszheng"
+                },
+                {
+                    "change": "Second change",
+                    "date": "10-15-2023",
+                    "user": "abisatti"
+                }
+            ]
+        },
+        "comments": {
+            "comments": [
+                {
+                    "user": "cyruszheng",
+                    "userInput": "This is the first comment.",
+                    "date": "10-13-2023",
+                    "replies": [
+                        {
+                            "user": "abisatti",
+                            "userInput": "This is a reply to the first comment.",
+                            "date": "10-14-2023",
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
 }

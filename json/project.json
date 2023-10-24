@@ -30,20 +30,6 @@
                         "priority": "MEDIUM"
                     }
                 ]
-            },
-            {
-                "name": "In Progress",
-                "tasks": [
-                    {
-                        "name": "Task 3",
-                        "description": "Description for Task 3",
-                        "creator": {
-                            "username": "bslaski10"
-                        },
-                        "dueDate": "10-15-2023",
-                        "priority": "LOW"
-                    }
-                ]
             }
         ],
         "comments": [
@@ -59,81 +45,6 @@
                         "replies": []
                     }
                 ]
-            },
-            {
-                "user": "bslaski10",
-                "userInput": "This is another comment.",
-                "date": "10-15-2023",
-                "replies": []
-            }
-        ]
-    },
-    {
-        "project": {
-            "name": "project2",
-            "id": "0d674ebf-79da-4979-9894-81959e2be0c6",
-            "comment": "N/A",
-            "owner": "abisatti",
-            "members": "cyruszheng, bslaski10, tp0113"
-        },
-        "columns": [
-            {
-                "name": "To Do",
-                "tasks": [
-                    {
-                        "name": "Task 1",
-                        "description": "Description for Task 1",
-                        "creator": {
-                            "username": "cyruszheng"
-                        },
-                        "dueDate": "10-15-2023",
-                        "priority": "HIGH"
-                    },
-                    {
-                        "name": "Task 2",
-                        "description": "Description for Task 2",
-                        "creator": {
-                            "username": "abisatti"
-                        },
-                        "dueDate": "10-15-2023",
-                        "priority": "MEDIUM"
-                    }
-                ]
-            },
-            {
-                "name": "In Progress",
-                "tasks": [
-                    {
-                        "name": "Task 3",
-                        "description": "Description for Task 3",
-                        "creator": {
-                            "username": "bslaski10"
-                        },
-                        "dueDate": "10-15-2023",
-                        "priority": "LOW"
-                    }
-                ]
-            }
-        ],
-        "comments": [
-            {
-                "user": "cyruszheng",
-                "userInput": "This is the first comment.",
-                "date": "10-13-2023",
-                "replies": [
-                    {
-                        "user": "abisatti",
-                        "userInput": "This is a reply to the first comment.",
-                        "date": "10-14-2023",
-                        "replies": []
-                    }
-                ]
-            },
-            {
-                "user": "bslaski10",
-                "userInput": "This is another comment.",
-                "date": "10-15-2023",
-                "replies": []
             }
         ]
     }
