@@ -7,13 +7,6 @@ public class User {
     private String password;
     private UUID id;
 
-    public User (String username, String password, String firstName, String lastName) {
-        this.username = username;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
     public User(UUID id, String username, String password, String firstName, String lastName) {
         this.id = UUID.randomUUID();
         this.username = username;
@@ -49,4 +42,5 @@ public class User {
     public UUID getId() {
         return id;
     }
+    
 }
