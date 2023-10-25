@@ -6,7 +6,7 @@ public class Facade {
         return currentUser;
     }
 
-    public User signUp(String username, String password, String firstName, String lastName, String occupation) {
+    public User signUp(String username, String password, String firstName, String lastName) {
         return currentUser;
     }
 
