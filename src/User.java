@@ -7,9 +7,7 @@ public class User {
     private String password;
     private UUID id;
 
-<<<<<<< HEAD
-=======
-    public User(UUID id, String username, String password, String firstName, String lastName,) {
+    public User(UUID id, String username, String password, String firstName, String lastName) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -17,8 +15,7 @@ public class User {
         this.lastName = lastName;
     }
 
->>>>>>> 8e81439bb3b87deae0dff596d4b7e1ee97b1d043
-    public User(UUID id, String username, String password, String firstName, String lastName) {
+    public User(String username, String password, String firstName, String lastName) {
         this.id = UUID.randomUUID();
         this.username = username;
         this.password = password;
@@ -37,7 +34,7 @@ public class User {
 	public String getLastName() {
 		return lastName;
 	}
-	
+	/* 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
@@ -56,7 +53,7 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
+    }*/
 
     public UUID getId() {
         return id;
