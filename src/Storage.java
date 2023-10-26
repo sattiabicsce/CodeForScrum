@@ -17,18 +17,4 @@ public class Storage {
     public static boolean saveProjects() {
         return true;
     }
-
-    public static void main(String[] args){
-        ArrayList<User> users = getUsers();
-
-        for(User user : users){
-            System.out.println(user);
-        }
-
-        ArrayList<Project> projects = getProjects();
-        for(Project project : projects){
-            System.out.println(project);
-        }
-    }
-
 }
