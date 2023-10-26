@@ -52,3 +52,15 @@ public class Facade {
 }
 
 // has to interact with users, users will interact with the storage
+public static void main(String[] args){
+        ArrayList<User> users = getUsers();
+
+        for(User user : users){
+            System.out.println(user);
+        }
+
+        ArrayList<Project> projects = getProjects();
+        for(Project project : projects){
+            System.out.println(project);
+        }
+    }
