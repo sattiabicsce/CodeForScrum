@@ -21,3 +21,5 @@ public class Facade {
     public void addComment(String note) {
     }
 }
+
+// has to interact with users, users will interact with the storage

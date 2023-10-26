@@ -5,7 +5,7 @@ public class Users {
 	private ArrayList<User> userList;
 	
 	private Users() {
-		userList = DataLoader.getUser();
+		userList = DataLoader.getUsers();
 	}
 	
 	public static Users getInstance() {
@@ -42,7 +42,7 @@ public class Users {
 	public boolean addUser(String username, String password, String firstName, String lastName) {
 		if(haveUser(username))return false;
 		
-		userList.add(new User(id, username, password, firstName, lastName));
+		userList.add(new User(username, password, firstName, lastName));
 		return true;
 	}
 	
