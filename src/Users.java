@@ -45,6 +45,19 @@ public class Users {
 		userList.add(new User(username, password, firstName, lastName));
 		return true;
 	}
+
+	public User checkUser(String username, String password) {
+        for (User user : userList) {
+            if (username.equals(user.getUsername())) {
+                if (password.equals(user.getPassword())) {
+                    return user;
+                } else {
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
 	
 	public void saveUsers() {
 		DataWriter.saveUsers();

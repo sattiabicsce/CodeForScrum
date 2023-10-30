@@ -5,17 +5,17 @@ import java.util.List;
 class Task {
     private String name;
     private String description;
-    private User creator;
+    private ArrayList<User> users;
     private Date dueDate;
     private TaskStatus status;
     private TaskPriority priority;
     private List<Comment> comments;
     private List<History> history;
 
-    public Task(String name, String description, User creator, Date dueDate, TaskStatus status, TaskPriority priority) {
+    public Task(String name, String description, ArrayList<User> users, Date dueDate, TaskStatus status, TaskPriority priority) {
         this.name = name;
         this.description = description;
-        this.creator = creator;
+        this.users = users;
         this.dueDate = dueDate;
         this.status = status;
         this.priority = priority;
@@ -31,8 +31,8 @@ class Task {
         return description;
     }
 
-    public User getCreator() {
-        return creator;
+    public ArrayList<User> getUser() {
+        return users;
     }
 
     public Date getDueDate() {
