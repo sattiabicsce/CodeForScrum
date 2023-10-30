@@ -1,35 +1,31 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Facade {
     private User currentUser;
     private Project currentProject;
-    private Storage storage;
-
-    public Facade(Storage storage) {
-        this.storage = storage;
-    }
 
     public User login(String username, String password) {
-        currentUser = storage.getUserByUsernameAndPassword(username, password);
+        currentUser = Users.getInstance().getUser(username);
         return currentUser;
     }
 
     public User signUp(String username, String password, String firstName, String lastName) {
         currentUser = new User(username, password, firstName, lastName);
-        storage.saveUser(currentUser);
+        Users.getInstance().getUser();
         return currentUser;
     }
 
     public Project createProject(String name) {
         currentProject = new Project(name);
-        storage.saveProject(currentProject);
+        project.saveProject(currentProject);
         return currentProject;
     }
 
     public boolean addTask(Task task) {
         if (currentProject != null) {
             currentProject.addTask(task);
-            storage.updateProject(currentProject);
+            project.updateProject(currentProject);
             return true;
         }
         return false;
@@ -39,7 +35,7 @@ public class Facade {
         if (currentProject != null) {
             Comment comment = new Comment(note);
             currentProject.addComment(comment);
-            storage.updateProject(currentProject);
+            project.updateProject(currentProject);
         }
     }
 
