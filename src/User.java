@@ -58,5 +58,9 @@ public class User {
     public UUID getId() {
         return id;
     }
-    
+
+    public String toString() {
+        return "\nID: " + this.id + "\n First Name: " + this.firstName + "\nLast Name: " + this.lastName + "\nUsername: " + this.username + "\nPassword: " + this.password;
+    }
 }
+    

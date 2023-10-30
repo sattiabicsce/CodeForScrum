@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Users {
-	private static Users users;
+	private static Users instance;
 	private ArrayList<User> userList;
 	
 	private Users() {
@@ -9,11 +9,11 @@ public class Users {
 	}
 	
 	public static Users getInstance() {
-		if(users == null) {
-			users = new Users();
+		if(instance == null) {
+			instance = new Users();
 		}
 		
-		return users;
+		return instance;
 	}
 
 	public boolean haveUser(String userName) {

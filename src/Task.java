@@ -62,4 +62,10 @@ class Task {
     public void addHistory(History historyItem) {
         history.add(historyItem);
     }
+
+    public void add(Task task) {
+    }
+
+    public void remove(Task t) {
+    }
 }
