@@ -3,14 +3,14 @@ import java.util.List;
 public class Facade {
     private User currentUser;
     private Project currentProject;
-    private Storage storage;
+    private Users users;
 
-    public Facade(Storage storage) {
-        this.storage = storage;
+    public Users(Users users) {
+        this.users = users;
     }
 
     public User login(String username, String password) {
-        currentUser = storage.getUserByUsernameAndPassword(username, password);
+        currentUser = users.getUserByUsernameAndPassword(username, password);
         return currentUser;
     }
 
