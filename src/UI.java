@@ -3,7 +3,7 @@ import java.util.UUID;
 
 public class UI {
 
-    private static User user = new user();
+    private static User user;
     private static UUID loggedInUserId = null;
 
     public static void main(String[] args) {
@@ -49,8 +49,8 @@ public class UI {
         System.out.print("Enter your last name: ");
         String lastName = scanner.nextLine();
 
-        User Facade.signUp(username, password, firstName, lastName);
-        System.out.println("User created successfully.");
+        // User Facade.signUp(username, password, firstName, lastName);
+         System.out.println("User created successfully.");
     }
 
     private static void logIn(Scanner scanner) {
