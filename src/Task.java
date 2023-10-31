@@ -77,30 +77,15 @@ class Task {
     }
 
     public String toString() {
-        StringBuilder returnString = new StringBuilder();
-        returnString.append("\nTask ID: ").append(this.id)
-                    .append("\nTask Name: ").append(this.name)
-                    .append("\nTask Description: ").append(this.description)
-                    .append("\nDue Date: ").append(this.dueDate)
-                    .append("\nStatus: ").append(this.status)
-                    .append("\nPriority: ").append(this.priority)
-                    .append("\nAssigned Users: ").append(this.users);
-    
-        if (comments != null && !comments.isEmpty()) {
-            returnString.append("\nComments:");
-            for (Comment comment : comments) {
-                returnString.append(comment.toString());
-            }
-        }
-    
-        if (history != null && !history.isEmpty()) {
-            returnString.append("\nHistory:");
-            for (History historyItem : history) {
-                returnString.append(historyItem.toString());
-            }
-        }
-    
-        return returnString.toString();
+        return "\nTask ID: " + this.id +
+               "\nTask Name: " + this.name +
+               "\nTask Description: " + this.description +
+               "\nDue Date: " + this.dueDate +
+               "\nStatus: " + this.status +
+               "\nPriority: " + this.priority +
+               "\nAssigned Users: " + this.users +
+               (comments != null && !comments.isEmpty() ? "\nComments: " + comments.toString() : "") +
+               (history != null && !history.isEmpty() ? "\nHistory: " + history.toString() : "");
     }
     
 
