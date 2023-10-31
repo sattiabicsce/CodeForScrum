@@ -1,7 +1,7 @@
-package json;
+
 import java.util.UUID;
 
-public class ids {
+public class CreateUUID {
 
     public static void main(String [] args) {
         int i = 0;
