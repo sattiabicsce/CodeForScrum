@@ -41,4 +41,11 @@ class Comment {
     public void addReply(Comment reply) {
         replies.add(reply);
     }
+
+    public String toString() {
+        return "User: " + user.getUsername() +
+               "\nComment: " + userInput +
+               "\nDate: " + date +
+               (replies != null && !replies.isEmpty() ? "\nReplies: " + replies.toString() : "");
+    }
 }
