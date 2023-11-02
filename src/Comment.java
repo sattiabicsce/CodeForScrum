@@ -1,44 +1,41 @@
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.UUID;
 
+public class Comment {
+    public String comment;
+    public UUID userID;
 
-class Comment {
-    private User user;
-    private String userInput;
-    private Date date;
-    private ArrayList<Comment> replies;
-
-    public Comment(User user, String userInput) {
-        this.user = user;
-        this.userInput = userInput;
-        this.date = new Date();
-        this.replies = new ArrayList<>();
+    public Comment(String Comment, User user) 
+    {
+        this.comment = Comment;
+        this.userID = user.getId();
     }
 
-    public Comment(User user, String userInput, Date date, ArrayList<Comment> replies) {
-        this.user = user;
-        this.userInput = userInput;
-        this.date = date;
-        this.replies = replies;
+    public Comment(UUID userID, String Comment)
+    {
+        this.comment = Comment;
+        this.userID = userID;
     }
 
-    public User getUser() {
-        return user;
+    public void editComment(String comment) {
+        this.comment = comment;
     }
 
-    public String getUserInput() {
-        return userInput;
+    public UUID getUserID()
+    {
+        return this.userID;
     }
 
-    public Date getDate() {
-        return date;
+    public String getComment()
+    {
+        return this.comment;
     }
 
-    public ArrayList<Comment> getReplies() {
-        return replies;
+    public String toString()
+    {
+        User replyUser = UserDatabase.getInstance().getUserbyId(this.userID);
+        if(replyUser != null)
+        return "(" + replyUser.getUserName() + ")" + ": " + this.getComment();
+        return null;
     }
 
-    public void addReply(Comment reply) {
-        replies.add(reply);
-    }
 }

@@ -1,62 +1,58 @@
-import java.util.ArrayList;
-import java.util.List;
+ import java.util.ArrayList;
 
 public class Facade {
-    private User currentUser;
-    private Project currentProject;
+    private User user;
+    private Task task;
+    private Project project;
 
-    public User login(String username, String password) {
-        currentUser = Users.getInstance().getUser(username);
-        return currentUser;
+    public User login(String userName, String password) {
+        user = UserDatabase.getInstance().getUser(userName,password);
+        return user;
     }
 
-    public User signUp(String username, String password, String firstName, String lastName) {
-        currentUser = new User(username, password, firstName, lastName);
-        Users.getInstance().getUser();
-        return currentUser;
+    public Boolean signUp(String firstName, String LastName, String userName, String password) 
+    {
+        return UserDatabase.getInstance().add(firstName, LastName, userName, password);
+
     }
 
-    public Project createProject(String name) {
-        currentProject = new Project(name);
-        project.saveProject(currentProject);
-        return currentProject;
+    public Boolean addTask(String taskName, String title, User admin)
+    {
+        return TaskList.getInstance().add(taskName, title, admin);
     }
 
-    public boolean addTask(Task task) {
-        if (currentProject != null) {
-            currentProject.addTask(task);
-            project.updateProject(currentProject);
-            return true;
-        }
-        return false;
+    public Task getTask(String taskName)
+    {
+        task = TaskList.getInstance().getTask(taskName);
+        return task;
     }
 
-    public void addComment(String note) {
-        if (currentProject != null) {
-            Comment comment = new Comment(note);
-            currentProject.addComment(comment);
-            project.updateProject(currentProject);
-        }
+    public ArrayList<Task> getTasks()
+    {
+        return TaskList.getInstance().getTasks();
     }
 
-    public List<Task> getTasks() {
-        if (currentProject != null) {
-            return currentProject.getTasks();
-        }
-            return null;
+    public User getUser()
+    {
+        return user;
+    }
+
+    public User getUserbyName(String firstName, String lastName){
+        
+        return user= UserDatabase.getInstance().getUserbyName(firstName,lastName);
+    }
+
+    public Project getProject(String name) {
+        project = ProjectList.getInstance().getProject(name);
+        return project;
+
+    }
+
+    public ArrayList<Project> getAllProjects() {
+        return ProjectList.getInstance().getAllProjects();
+    }
+
+    public void addCommentProject(Project project) {
+
     }
 }
-
-// has to interact with users, users will interact with the storage
-public static void main(String[] args){
-        ArrayList<User> users = getUsers();
-
-        for(User user : users){
-            System.out.println(user);
-        }
-
-        ArrayList<Project> projects = getProjects();
-        for(Project project : projects){
-            System.out.println(project);
-        }
-    }

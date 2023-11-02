@@ -1,65 +1,105 @@
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.UUID;
 
-class Task {
-    private String name;
-    private String description;
-    private User creator;
-    private Date dueDate;
-    private TaskStatus status;
-    private TaskPriority priority;
-    private List<Comment> comments;
-    private List<History> history;
+/**
+ * An abstract class representing a task in the application.
+ */
+public abstract class Task {
 
-    public Task(String name, String description, User creator, Date dueDate, TaskStatus status, TaskPriority priority) {
-        this.name = name;
-        this.description = description;
-        this.creator = creator;
-        this.dueDate = dueDate;
-        this.status = status;
-        this.priority = priority;
-        this.comments = new ArrayList<>();
-        this.history = new ArrayList<>();
+    public UUID taskID; // Unique identifier for the task
+    public ArrayList<User> users; // List of users assigned to the task
+    public String taskName; // Name of the task
+    public ArrayList<Comment> taskComments; // List of comments associated with the task
+
+    /**
+     * Constructor for creating a task with specific properties.
+     */
+    public Task(UUID taskUUID, ArrayList<User> users, String taskName, ArrayList<Comment> taskComments) {
+        this.taskID = taskUUID; // Set the task ID
+        this.users = users; // Set the list of users assigned to the task
+        this.taskName = taskName; // Set the task name
+        this.taskComments = taskComments; // Set the list of comments associated with the task
     }
 
-    public String getName() {
-        return name;
+    /**
+     * Constructor for creating a task with a name.
+     */
+    public Task(String taskName){
+        this.taskName = taskName; // Set the task name
     }
 
-    public String getDescription() {
-        return description;
+    /**
+     * Set the name of the task.
+     */
+    public void setTaskName(String taskName){
+        this.taskName = taskName; // Update the task name
     }
 
-    public User getCreator() {
-        return creator;
-    }
-
-    public Date getDueDate() {
-        return dueDate;
-    }
-
-    public TaskStatus getStatus() {
-        return status;
-    }
-
-    public TaskPriority getPriority() {
-        return priority;
-    }
-
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public List<History> getHistory() {
-        return history;
-    }
-
+    /**
+     * Add a comment to the task.
+     */
     public void addComment(Comment comment) {
-        comments.add(comment);
+        if (taskComments == null) {
+            taskComments = new ArrayList<Comment>(); // Initialize the comments list if null
+            taskComments.add(comment);
+        } else {
+            taskComments.add(comment); // Add the comment to the existing list
+        }
     }
 
-    public void addHistory(History historyItem) {
-        history.add(historyItem);
+    /**
+     * Add a user to the task.
+     */
+    public void addUser(User user) {
+        users.add(user); // Add the user to the task's assigned users
+    }
+
+    /**
+     * Get a string representation of the task.
+     * @return String representation of the task including its name, assigned users, and comments
+     */
+    public String toString() {
+        return "\n" + "Task Name: " + this.taskName + "\nUsers:" + this.users + "\nComments: " + this.taskComments;
+    }
+
+    /**
+     * Get the unique identifier of the task.
+     * @return Unique identifier (UUID) of the task
+     */
+    public UUID getTaskId() {
+        return this.taskID; // Return the task's unique identifier
+    }
+
+    /**
+     * Get the name of the task.
+     */
+    public String getTaskName() {
+        return this.taskName; // Return the task's name
+    }
+
+    /**
+     * Get the list of users assigned to the task.
+     */
+    public ArrayList<User> getUsers() {
+        return this.users; // Return the list of users assigned to the task
+    }
+
+    /**
+     * Get the list of comments associated with the task.
+     */
+    public ArrayList<Comment> getTaskComments() {
+        return this.taskComments; // Return the list of comments associated with the task
+    }
+
+    /**
+     * Change the user assigned to the task. Replaces the specified user with a new user.
+     */
+    public void changeUser(User addUser, User removeUser) {
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).equals(removeUser)) {
+                users.remove(i); // Remove the specified user
+            }
+        }
+        users.add(addUser); // Add the new user to the task
     }
 }

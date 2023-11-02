@@ -1,0 +1,27 @@
+Code Mission Impossible Company
+Welcome Atticus Madden
+
+All Projects:
+Soap Free Washers
+Air Computers
+Electric Missiles
+
+Current Project: Electric Missiles
+
+Column: BackLog
+Column: Doing
+
+Task Name: Initialize super algorithm to detonate at warp speed
+Users:[Jeff Goldblum]
+Comments: [(atticusfinch): Avoid civillians Jeff]
+
+Task Name: Curve the metal to make a cylindrical shape
+Users:[Jeff Goldblum]
+Comments: [(jeffgoldblum): Not cylindrical enough, (atticusfinch): What's a cylinder, (atticusmadden): How about you do it jeff]
+
+Column: Done
+Column: Abandoned
+
+Task Name: Make impossible burger possible
+Users:[Atticus Madden]
+Comments: [null]
