@@ -25,6 +25,9 @@ public class User {
        this.userPassword = userPassword;
     }
 
+    public User(String string) {
+    }
+
     // Returns a string representation of the user's full name
     public String toString() {
         return this.firstName + " " + this.lastName;
